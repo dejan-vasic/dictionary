@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+}
+
+ul > li.card {
+    width: 150px;
+    height: auto;
+    position: relative;
+    transition: transform 0.5s;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.card.flipped {
+    transform: rotateX(180deg);
+}
+
+.card-back {
+    display: none;
+    background-color: white; /* Set the background color for the back of the card */
+    transform: rotateX(180deg);
+    margin: 20px;
+    text-align: center;
+}
+
+.card-front {
+    /* border: 2px solid black; */
+    margin: 20px;
+    text-align: center;
+}
+
+.card.flipped .card-back {
+    display: block; /* Make sure to set the appropriate display property */
+}
+
+.card.flipped .card-front {
+    display: none; /* Make sure to set the appropriate display property */
+}
