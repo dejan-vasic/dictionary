@@ -1,0 +1,656 @@
+[
+    {
+        "front": "ocorr\u00eancia",
+        "back": null,
+        "next_review_date": "2024-01-22T15:05:33.994029",
+        "interval": 1
+    },
+    {
+        "front": "previs\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T15:26:57.185431",
+        "interval": 1
+    },
+    {
+        "front": "enganar",
+        "back": null,
+        "next_review_date": "2024-01-22T15:27:10.291037",
+        "interval": 1
+    },
+    {
+        "front": "sacana",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:33.997864",
+        "interval": 1
+    },
+    {
+        "front": "sacanagem",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:33.998864",
+        "interval": 1
+    },
+    {
+        "front": "previsto",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.000033",
+        "interval": 1
+    },
+    {
+        "front": "sabedoria",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.002031",
+        "interval": 1
+    },
+    {
+        "front": "derreter",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.003785",
+        "interval": 1
+    },
+    {
+        "front": "palhaso",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.004711",
+        "interval": 1
+    },
+    {
+        "front": "greve",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.006913",
+        "interval": 1
+    },
+    {
+        "front": "paso",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.008315",
+        "interval": 1
+    },
+    {
+        "front": "cacofonia",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.010683",
+        "interval": 1
+    },
+    {
+        "front": "pasto",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.012383",
+        "interval": 1
+    },
+    {
+        "front": "perseguir",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.014414",
+        "interval": 1
+    },
+    {
+        "front": "tecido",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.016338",
+        "interval": 1
+    },
+    {
+        "front": "fio",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.017339",
+        "interval": 1
+    },
+    {
+        "front": "taer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.019762",
+        "interval": 1
+    },
+    {
+        "front": "tingir",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.021869",
+        "interval": 1
+    },
+    {
+        "front": "teclado",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.022915",
+        "interval": 1
+    },
+    {
+        "front": "trama",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.024471",
+        "interval": 1
+    },
+    {
+        "front": "teclar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.028414",
+        "interval": 1
+    },
+    {
+        "front": "digitar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.030451",
+        "interval": 1
+    },
+    {
+        "front": "tecer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.032810",
+        "interval": 1
+    },
+    {
+        "front": "teia",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.034289",
+        "interval": 1
+    },
+    {
+        "front": "regata",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.036844",
+        "interval": 1
+    },
+    {
+        "front": "manga",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.038706",
+        "interval": 1
+    },
+    {
+        "front": "remar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.040498",
+        "interval": 1
+    },
+    {
+        "front": "palet\u00f3",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.043177",
+        "interval": 1
+    },
+    {
+        "front": "blazer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.044252",
+        "interval": 1
+    },
+    {
+        "front": "conto de fadas",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.048034",
+        "interval": 1
+    },
+    {
+        "front": "v\u00edcio",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.050898",
+        "interval": 1
+    },
+    {
+        "front": "intrometer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.051897",
+        "interval": 1
+    },
+    {
+        "front": "afastar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.054431",
+        "interval": 1
+    },
+    {
+        "front": "sequestar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.056597",
+        "interval": 1
+    },
+    {
+        "front": "renda",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.058594",
+        "interval": 1
+    },
+    {
+        "front": "comportar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.060003",
+        "interval": 1
+    },
+    {
+        "front": "molde",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.062872",
+        "interval": 1
+    },
+    {
+        "front": "exagerar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.065461",
+        "interval": 1
+    },
+    {
+        "front": "moldar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.067536",
+        "interval": 1
+    },
+    {
+        "front": "deputado",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.069534",
+        "interval": 1
+    },
+    {
+        "front": "agir",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.069534",
+        "interval": 1
+    },
+    {
+        "front": "respingar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.085187",
+        "interval": 1
+    },
+    {
+        "front": "alheios",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.085187",
+        "interval": 1
+    },
+    {
+        "front": "c\u00e2mara",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.100813",
+        "interval": 1
+    },
+    {
+        "front": "voto popular",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.109631",
+        "interval": 1
+    },
+    {
+        "front": "arcaico",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.113978",
+        "interval": 1
+    },
+    {
+        "front": "desprender",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.113978",
+        "interval": 1
+    },
+    {
+        "front": "cercar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.113978",
+        "interval": 1
+    },
+    {
+        "front": "louvor",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.113978",
+        "interval": 1
+    },
+    {
+        "front": "cipoal",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.128356",
+        "interval": 1
+    },
+    {
+        "front": "desencanto",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.132100",
+        "interval": 1
+    },
+    {
+        "front": "virtudes",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.136216",
+        "interval": 1
+    },
+    {
+        "front": "preservar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.140219",
+        "interval": 1
+    },
+    {
+        "front": "capaz",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.160054",
+        "interval": 1
+    },
+    {
+        "front": "altura",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.160054",
+        "interval": 1
+    },
+    {
+        "front": "largura",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.170186",
+        "interval": 1
+    },
+    {
+        "front": "comprimento",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.170186",
+        "interval": 1
+    },
+    {
+        "front": "cumprimentar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.179689",
+        "interval": 1
+    },
+    {
+        "front": "torcer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.179689",
+        "interval": 1
+    },
+    {
+        "front": "cospir",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.193043",
+        "interval": 1
+    },
+    {
+        "front": "bisop",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.197899",
+        "interval": 1
+    },
+    {
+        "front": "por que",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.202920",
+        "interval": 1
+    },
+    {
+        "front": "porque",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.219649",
+        "interval": 1
+    },
+    {
+        "front": "redor",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.224034",
+        "interval": 1
+    },
+    {
+        "front": "afinada",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.230191",
+        "interval": 1
+    },
+    {
+        "front": "desafinada",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.232934",
+        "interval": 1
+    },
+    {
+        "front": "afinar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.235105",
+        "interval": 1
+    },
+    {
+        "front": "estrebaria",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.238508",
+        "interval": 1
+    },
+    {
+        "front": "boja",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.241823",
+        "interval": 1
+    },
+    {
+        "front": "baja",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.246202",
+        "interval": 1
+    },
+    {
+        "front": "qural",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.249064",
+        "interval": 1
+    },
+    {
+        "front": "mudo",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.252784",
+        "interval": 1
+    },
+    {
+        "front": "humor",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.257066",
+        "interval": 1
+    },
+    {
+        "front": "couve",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.260061",
+        "interval": 1
+    },
+    {
+        "front": "couve-flor",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.265068",
+        "interval": 1
+    },
+    {
+        "front": "f\u00eamur",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.268424",
+        "interval": 1
+    },
+    {
+        "front": "apojo",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.271434",
+        "interval": 1
+    },
+    {
+        "front": "don",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.274438",
+        "interval": 1
+    },
+    {
+        "front": "assombrosos",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.277706",
+        "interval": 1
+    },
+    {
+        "front": "infla\u00e7\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.280279",
+        "interval": 1
+    },
+    {
+        "front": "defla\u00e7\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.284994",
+        "interval": 1
+    },
+    {
+        "front": "conviver",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.287988",
+        "interval": 1
+    },
+    {
+        "front": "prevalecer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.290043",
+        "interval": 1
+    },
+    {
+        "front": "dotado",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.294635",
+        "interval": 1
+    },
+    {
+        "front": "imprestar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.300305",
+        "interval": 1
+    },
+    {
+        "front": "chapa",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.303546",
+        "interval": 1
+    },
+    {
+        "front": "caprichoso",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.306166",
+        "interval": 1
+    },
+    {
+        "front": "assa",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.310362",
+        "interval": 1
+    },
+    {
+        "front": "picou",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.314910",
+        "interval": 1
+    },
+    {
+        "front": "mamar",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.318047",
+        "interval": 1
+    },
+    {
+        "front": "gemer",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.320271",
+        "interval": 1
+    },
+    {
+        "front": "churrasqueira",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.325152",
+        "interval": 1
+    },
+    {
+        "front": "ademiss\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.328234",
+        "interval": 1
+    },
+    {
+        "front": "demiss\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.331623",
+        "interval": 1
+    },
+    {
+        "front": "demitir",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.334897",
+        "interval": 1
+    },
+    {
+        "front": "chapeado",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.340114",
+        "interval": 1
+    },
+    {
+        "front": "lascado",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.343108",
+        "interval": 1
+    },
+    {
+        "front": "caber",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.345010",
+        "interval": 1
+    },
+    {
+        "front": "prender",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.349928",
+        "interval": 1
+    },
+    {
+        "front": "curto",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.353262",
+        "interval": 1
+    },
+    {
+        "front": "atrocidade",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.357792",
+        "interval": 1
+    },
+    {
+        "front": "remorco",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.359944",
+        "interval": 1
+    },
+    {
+        "front": "pulsera",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.365577",
+        "interval": 1
+    },
+    {
+        "front": "un\u00e7\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.369566",
+        "interval": 1
+    },
+    {
+        "front": "c\u00e9lula",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.372475",
+        "interval": 1
+    },
+    {
+        "front": "cela de pris\u00e3o",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.380005",
+        "interval": 1
+    },
+    {
+        "front": "fera",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.383386",
+        "interval": 1
+    },
+    {
+        "front": "feira",
+        "back": null,
+        "next_review_date": "2024-01-22T12:05:34.389039",
+        "interval": 1
+    },
+    {
+        "front": "safado",
+        "back": "sem-vergonha",
+        "next_review_date": "2024-01-22T15:34:25.094987",
+        "interval": 1
+    }
+]

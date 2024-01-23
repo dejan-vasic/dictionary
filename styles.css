@@ -17,7 +17,7 @@ ul > li.card {
     transform: rotateX(180deg);
 }
 
-.card-back {
+.back {
     display: none;
     background-color: white; /* Set the background color for the back of the card */
     transform: rotateX(180deg);
@@ -25,7 +25,7 @@ ul > li.card {
     text-align: center;
 }
 
-.card-front {
+.front {
     /* border: 2px solid black; */
     margin: 20px;
     text-align: center;
@@ -37,4 +37,17 @@ ul > li.card {
 
 .card.flipped .card-front {
     display: none; /* Make sure to set the appropriate display property */
+}
+
+div > p {
+    margin: 25px;
+}
+
+ul.phrase {
+    display: flex;
+}
+
+div.meaning {
+    width: 100%;
+    border: 2px solid black;
 }

@@ -1,163 +1,71 @@
-import mysql.connector
-from mysql.connector import Error
 import sys
+from flashcard import *
+# from ui import generate_html
 
-def connect_to_database():
-    try:
-        connection = mysql.connector.connect(
-            host='mysql687.loopia.se',
-            database='smrcak_rs_db_2',
-            user='dejan@s70660',
-            password='base2024'
-        )
-        if connection.is_connected():
-            print("Connected to the database")
-            return connection
-    except Error as e:
-        print(f"Error: {e}")
-        return None
+def main():
+    initialize_cards_data()
+    
+    if len(sys.argv) < 2:
+        print("Usage: py main.py <command> [options]")
+        return
 
-def close_connection(connection):
-    if connection.is_connected():
-        connection.close()
-        print("Connection closed")
+    command = sys.argv[1]
 
-def list_words(connection):
-    cursor = connection.cursor()
-    try:
-        query = "SELECT * FROM words"
-        cursor.execute(query)
-        results = cursor.fetchall()
-        return results
-        # for result in results:
-        #     print(result)
-    except Error as e:
-        print(f"Error listing words: {e}")
-        return []
-    finally:
-        cursor.close()
+    if command == "add":
+        if len(sys.argv) == 4:
+            front = sys.argv[2]
+            back = sys.argv[3]
+            add_card(front, back)
+            print("Card added successfully.")
+        else:
+            print("Usage: py main.py add <front> <back>")
+    
+    elif command == "list":
+        if len(sys.argv) >= 2:
+            option = "all"
+            if len(sys.argv) == 3 and sys.argv[2] in ["all", "due", "learn"]:
+                option = sys.argv[2]
+            cards = list_cards(option, sort_by_date=True)
+            # generate_html(cards) 
+            for card in cards:
+                print(card)
+        else:
+            print("Usage: py main.py list [all/due/learn]")
+    
+    elif command == "delete":
+        if len(sys.argv) == 3:
+            front_to_delete = sys.argv[2]
+            index_to_delete = next((i for i, card in enumerate(data) if card['front'] == front_to_delete), None)
+            if index_to_delete is not None:
+                delete_card(index_to_delete)
+                print(f"Card '{front_to_delete}' deleted successfully.")
+            else:
+                print(f"Card '{front_to_delete}' not found.")
+        else:
+            print("Usage: py main.py delete <front>")
+    
+    elif command == "edit":
+        if len(sys.argv) == 3:
+            front_to_edit = sys.argv[2]
+            card_to_edit = next((card for card in data if card['front'] == front_to_edit), None)
+            if card_to_edit:
+                card_to_edit['flag'] = 'edit'
+                save()
+                print(f"Card '{front_to_edit}' marked for editing.")
+            else:
+                print(f"Card '{front_to_edit}' not found.")
+        else:
+            print("Usage: py main.py edit <front>")
 
-def add_word(connection, word, meaning):
-    cursor = connection.cursor()
-    try:
-        query = "INSERT INTO words (word, meaning) VALUES (%s, %s)"
-        cursor.execute(query, (word, meaning))
-        connection.commit()
-        print("Word added successfully")
-    except Error as e:
-        print(f"Error adding word: {e}")
-    finally:
-        cursor.close()
-        connection.close()
-
-def delete_word(connection, word):
-    cursor = connection.cursor()
-    try:
-        query = "DELETE FROM words WHERE word = %s"
-        cursor.execute(query, (word,))
-        connection.commit()
-        print("Word deleted successfully")
-    except Error as e:
-        print(f"Error deleting word: {e}")
-    finally:
-        cursor.close()
-
-def edit_word(connection, old_word, new_word, new_meaning):
-    cursor = connection.cursor()
-    try:
-        query = "UPDATE words SET word = %s, meaning = %s WHERE word = %s"
-        cursor.execute(query, (new_word, new_meaning, old_word))
-        connection.commit()
-        print("Word edited successfully")
-    except Error as e:
-        print(f"Error editing word: {e}")
-    finally:
-        cursor.close()
-
-def generate_html(results):
-    html_content = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Words List</title>
-    </head>
-    <body>
-        <h1>Words List</h1>
-        <ul>
-    """
-
-    for result in results:
-        html_content += f"""
-        <li class='card' onmousedown="preventTextSelection(event)" ondblclick="rotateCard(this)">
-            <p class='card-front'>{result[1]}</p>
-            <p class='card-back'>back</p>
-        </li>"""
-
-    html_content += """
-        </ul>
-        <script>
-        function preventTextSelection(event) {
-            event.preventDefault();
-        }
-        function rotateCard(card) {
-            card.classList.toggle("flipped");
-        }
-        </script>
-    </body>
-    </html>
-    """
-
-    with open('words_list.html', 'w', encoding="utf8") as html_file:
-        html_file.write(html_content)
-
-    print('HTML file generated: words_list.html')
+    elif command == "review":
+        if len(sys.argv) == 3:
+            set_review(sys.argv[2])
+        else:
+            print("Usage: py main.py review <front>")
+    
+    else:
+        print(f"Unknown command: {command}")
+        print("Usage: py main.py <command> [options]")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: main.py <operation> <word> <meaning>")
-        sys.exit(1)
-
-    operation = sys.argv[1].lower()
-    if len(sys.argv) > 2:
-        word = sys.argv[2]
-        meaning = sys.argv[3]
-
-    connection = connect_to_database()
-
-    if connection:
-        try:
-            if operation == "list":
-                list_words(connection)
-                results = list_words(connection)
-                generate_html(results)
-            elif operation == "add":
-                add_word(connection, word, meaning)
-            elif operation == "delete":
-                delete_word(connection, word)
-            elif operation == "edit":
-                if len(sys.argv) < 6:
-                    print("Usage for edit: main.py edit <old_word> <new_word> <new_meaning>")
-                    sys.exit(1)
-                old_word = word
-                new_word = sys.argv[4]
-                new_meaning = sys.argv[5]
-                edit_word(connection, old_word, new_word, new_meaning)
-            else:
-                print("Invalid operation. Please choose add, delete, or edit.")
-        finally:
-            close_connection(connection)
-
-# # Connect to the database
-# conn = mysql.connector.connect(
-#     host="mysql687.loopia.se",
-#     user="dejan@s70660",
-#     password="base2024",
-#     database="smrcak_rs_db_2"
-# )
-
-# import mysql.connector
-# from mysql.connector import Error
-# import sys
+    main()
