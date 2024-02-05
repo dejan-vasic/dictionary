@@ -3,7 +3,6 @@ from flashcard import *
 # from ui import generate_html
 
 def main():
-    initialize_cards_data()
     
     if len(sys.argv) < 2:
         print("Usage: py main.py <command> [options]")
@@ -33,6 +32,7 @@ def main():
             print("Usage: py main.py list [all/due/learn]")
     
     elif command == "delete":
+        data = load()
         if len(sys.argv) == 3:
             front_to_delete = sys.argv[2]
             index_to_delete = next((i for i, card in enumerate(data) if card['front'] == front_to_delete), None)
@@ -45,6 +45,7 @@ def main():
             print("Usage: py main.py delete <front>")
     
     elif command == "edit":
+        data = load()
         if len(sys.argv) == 3:
             front_to_edit = sys.argv[2]
             card_to_edit = next((card for card in data if card['front'] == front_to_edit), None)

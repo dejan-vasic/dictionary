@@ -1,11 +1,29 @@
+import os
 import json
 import datetime
 
 data = []
 
+HOME = os.environ['HOME'] if os.name == 'posix' else os.path.join(os.environ['USERPROFILE'], 'Desktop')
+
+if 'ARCHIVE' not in os.environ:
+    # Verificar o sistema operacional
+    if os.name == 'posix':
+        print("""
+              Use this command to set path to your archive:
+              export ARCHIVE=/dictionary/<topic>.json""")
+    elif os.name == 'nt':
+        print("""
+              Use this command to set path to your archive:
+              set ARCHIVE=Dictionary-CLI\<topic>.json""")
+    exit()
+
+
 def load():
+    # print(HOME)
+    # print(os.path.join(HOME, os.environ['ARCHIVE']))
     try:
-        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'r') as f:
+        with open(os.path.join(HOME, os.environ['ARCHIVE']), 'r') as f:
             global data
             data = json.load(f)
     except FileNotFoundError:
@@ -13,131 +31,8 @@ def load():
     return data
 
 def save():
-    with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'w') as f:
+    with open(os.path.join(HOME, os.environ['ARCHIVE']), 'w') as f:
         json.dump(data, f, indent=4)
-
-def initialize_cards_data():
-    try:
-        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'r') as f:
-            pass
-    except FileNotFoundError:
-        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'w') as f:
-            json.dump([], f)
-
-def initialize_words():
-    words_to_add = [
-    ("ocorrência", None),
-    ("previsão", None),
-    ("enganar", None),
-    ("sacana", None),
-    ("sacanagem", None),
-    ("previsto", None),
-    ("sabedoria", None),
-    ("derreter", None),
-    ("palhaso", None),
-    ("greve", None),
-    ("paso", None),
-    ("cacofonia", None),
-    ("pasto", None),
-    ("perseguir", None),
-    ("tecido", None),
-    ("fio", None),
-    ("taer", None),
-    ("tingir", None),
-    ("teclado", None),
-    ("trama", None),
-    ("teclar", None),
-    ("digitar", None),
-    ("tecer", None),
-    ("teia", None),
-    ("regata", None),
-    ("manga", None),
-    ("remar", None),
-    ("paletó", None),
-    ("blazer", None),
-    ("conto de fadas", None),
-    ("vício", None),
-    ("intrometer", None),
-    ("afastar", None),
-    ("sequestar", None),
-    ("renda", None),
-    ("comportar", None),
-    ("molde", None),
-    ("exagerar", None),
-    ("moldar", None),
-    ("deputado", None),
-    ("agir", None),
-    ("respingar", None),
-    ("alheios", None),
-    ("câmara", None),
-    ("voto popular", None),
-    ("arcaico", None),
-    ("desprender", None),
-    ("cercar", None),
-    ("louvor", None),
-    ("cipoal", None),
-    ("desencanto", None),
-    ("virtudes", None),
-    ("preservar", None),
-    ("capaz", None),
-    ("altura", None),
-    ("largura", None),
-    ("comprimento", None),
-    ("cumprimentar", None),
-    ("torcer", None),
-    ("cospir", None),
-    ("bisop", None),
-    ("por que", None),
-    ("porque", None),
-    ("redor", None),
-    ("afinada", None),
-    ("desafinada", None),
-    ("afinar", None),
-    ("estrebaria", None),
-    ("boja", None),
-    ("baja", None),
-    ("qural", None),
-    ("mudo", None),
-    ("humor", None),
-    ("couve", None),
-    ("couve-flor", None),
-    ("fêmur", None),
-    ("apojo", None),
-    ("don", None),
-    ("assombrosos", None),
-    ("inflação", None),
-    ("deflação", None),
-    ("conviver", None),
-    ("prevalecer", None),
-    ("dotado", None),
-    ("imprestar", None),
-    ("chapa", None),
-    ("caprichoso", None),
-    ("assa", None),
-    ("picou", None),
-    ("mamar", None),
-    ("gemer", None),
-    ("churrasqueira", None),
-    ("ademissão", None),
-    ("demissão", None),
-    ("demitir", None),
-    ("chapeado", None),
-    ("lascado", None),
-    ("caber", None),
-    ("prender", None),
-    ("curto", None),
-    ("atrocidade", None),
-    ("remorco", None),
-    ("pulsera", None),
-    ("unção", None),
-    ("célula", None),
-    ("cela de prisão", None),
-    ("fera", None),
-    ("feira", None)
-    ]
-
-    for word, meaning in words_to_add:
-        add_card(word, meaning)
 
 def add_card(front, back):
     data = load()
@@ -167,6 +62,7 @@ def delete_cards(start_index, end_index):
     save()
 
 def edit_cards():
+    data = load()
     for card in data:
         if card.get('flag') and card['flag'] == "edit":
             del card['flag']
@@ -201,7 +97,7 @@ def list_cards(option="all", sort_by_date=False):
     return card_list
 
 def set_review(front):
-    print(front)
+    print("You reviewed:", front)
     data = load()
     now = datetime.datetime.now()
     for card in data:
