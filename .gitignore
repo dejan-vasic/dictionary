@@ -4,3 +4,6 @@ memory.txt
 words_list.html
 _main.py
 ui.py
+build
+dist
+main.spec

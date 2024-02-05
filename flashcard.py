@@ -5,7 +5,7 @@ data = []
 
 def load():
     try:
-        with open('phrases.json', 'r') as f:
+        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'r') as f:
             global data
             data = json.load(f)
     except FileNotFoundError:
@@ -13,15 +13,15 @@ def load():
     return data
 
 def save():
-    with open('phrases.json', 'w') as f:
+    with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'w') as f:
         json.dump(data, f, indent=4)
 
 def initialize_cards_data():
     try:
-        with open('phrases.json', 'r') as f:
+        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'r') as f:
             pass
     except FileNotFoundError:
-        with open('phrases.json', 'w') as f:
+        with open('/data/data/com.termux/files/home/dictionary/phrases.json', 'w') as f:
             json.dump([], f)
 
 def initialize_words():
@@ -221,8 +221,8 @@ def review_cards():
         next_review = datetime.datetime.fromisoformat(card['next_review_date'])
 
         if next_review <= now:
-            print(f"Front: {card['front']}")
 
+            print(f"Front: {card['front']}")
             answer = input("Do you remember what's on the back? (y/n) ")
 
             if answer.lower() == 'y':
